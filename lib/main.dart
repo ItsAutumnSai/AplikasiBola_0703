@@ -1,0 +1,66 @@
+import 'package:flutter/material.dart';
+<<<<<<< Updated upstream
+=======
+import 'package:project_pertama/login_screen.dart';
+import 'package:project_pertama/register_screen.dart';
+import 'container_page.dart';
+>>>>>>> Stashed changes
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'QuestSatu_0703',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+<<<<<<< Updated upstream
+      home: const HomePage(),
+=======
+      home: LoginScreen(),
+>>>>>>> Stashed changes
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        //gunakan center widget sehingga child widget secara horizontal ditengah
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, //vertical centering
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CircleAvatar(
+              radius: 100,
+              backgroundImage: AssetImage('assets/images/sultan pic.jpg'),
+            ),
+            SizedBox(height: 20), // Add vertical space
+            Text(
+              "Nama: Sultan A. I.",
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue[900],
+              ),
+            ),
+            Text("Kelas: IF-5B", style: TextStyle(fontSize: 15)),
+            Text("NIM: 3012310703", style: TextStyle(fontSize: 15)),
+            Text("Alamat: Surakarta", style: TextStyle(fontSize: 15)),
+            Text("Semester: 5", style: TextStyle(fontSize: 15)),
+          ],
+        ),
+      ),
+    );
+  }
+}
