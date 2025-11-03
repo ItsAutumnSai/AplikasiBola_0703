@@ -48,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     label: Text("Email", style: TextStyle(fontSize: screenWidth/30),),
-                    hintText: "Only enter email with @gmail.com postfix.",
+                    hintText: "Hanya masukan email berakhiran @gmail.com!",
                   ),
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                 ),
@@ -85,10 +85,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 ElevatedButton(
                   onPressed: () {
                     if (_globalKey.currentState!.validate()) {
-                      Navigator.pushReplacement(
+                      Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomeScreen()),);
+                          builder: (context) => HomeScreen()),
+                          (Route<dynamic> route) => false,);
                     }
                   },
                   style: ElevatedButton.styleFrom(
