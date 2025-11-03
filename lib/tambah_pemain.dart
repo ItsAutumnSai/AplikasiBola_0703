@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:project_pertama/detail_pemain.dart';
 import 'package:project_pertama/home_screen.dart';
 import 'package:project_pertama/main.dart';
 
@@ -174,8 +175,15 @@ class _TambahPemain extends State<TambahPemain> {
                 ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      log("message");
-                      Navigator.pop(context);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPemain(
+                        nama: _playerNameController.text,
+                        penyerang: _playerPosController.text,
+                        nomor: int.parse(_playerNumController.text),
+                        negara: _playerCountryController.text,
+                        usia: int.parse(_playerAgeController.text),
+                        tinggi: double.parse(_playerHeightController.text),
+                        gender: _playerGenderController ?? "",
+                      )));
                     }
                   },
                   style: ElevatedButton.styleFrom(

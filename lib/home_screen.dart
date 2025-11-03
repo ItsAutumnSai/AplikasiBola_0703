@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _MenuItem(icon: Icons.people, label: "Player", onTap: () {
+                _MenuItem(icon: Icons.person, label: "Player", onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => TambahPemain()));
                 },),
                 _MenuItem(icon: Icons.calendar_today, label: "Jadwal"),
